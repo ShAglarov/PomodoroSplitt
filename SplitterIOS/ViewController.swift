@@ -25,6 +25,6 @@ class ViewController: UIViewController {
 extension ViewController {
     func setupUI() {
         view.backgroundColor = .systemBackground
-        navigationItem.title = "Добро пожаловать в разработку Day_Splitter"
+        navigationItem.title = "Welcome App"
     }
 }
