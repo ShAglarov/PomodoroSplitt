@@ -10,72 +10,70 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Переопределить точку настройки после запуска приложения.
         return true
     }
-
+    
     // MARK: UISceneSession Lifecycle
-
+    
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
+        // Вызывается при создании нового сеанса сцены.
+        // Используйте этот метод, чтобы выбрать конфигурацию для создания новой сцены.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
+    
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+        // Вызывается, когда пользователь отменяет сеанс сцены.
+        // Если какие-либо сеансы были отменены, пока приложение не работало, это будет вызвано вскоре после application:didFinishLaunchingWithOptions.
+        // Используйте этот метод, чтобы освободить любые ресурсы, относящиеся к отброшенным сценам, поскольку они не вернутся.
     }
-
+    
     // MARK: - Core Data stack
-
+    
     lazy var persistentContainer: NSPersistentContainer = {
         /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
+         Постоянный контейнер для приложения. Эта реализация
+         создает и возвращает контейнер, загрузив хранилище для
+         приложение к нему. Это свойство является необязательным, поскольку существуют законные
+         ошибки, которые могут привести к сбою создания хранилища.
+         */
         let container = NSPersistentContainer(name: "SplitterIOS")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
+                // Замените эту реализацию кодом для соответствующей обработки ошибки.
+                // FatalError() заставляет приложение создать журнал сбоев и завершить работу. Не следует использовать эту функцию в готовом приложении, хотя она может быть полезна во время разработки.
+                
                 /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
+                 Типичными причинами ошибки здесь являются:
+                 * Родительский каталог не существует, не может быть создан или запрещает запись.
+                 * Постоянное хранилище недоступно из-за разрешений или защиты данных, когда устройство заблокировано.
+                 * На устройстве недостаточно места.
+                 * Магазин не удалось перенести на текущую версию модели.
+                 Проверьте сообщение об ошибке, чтобы определить, в чем заключалась реальная проблема.
                  */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
         return container
     }()
-
+    
     // MARK: - Core Data Saving support
-
+    
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                // Замените эту реализацию кодом для соответствующей обработки ошибки.
+                // FatalError() заставляет приложение создать журнал сбоев и завершить работу. Не следует использовать эту функцию в готовом приложении, хотя она может быть полезна во время разработки.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
-
+    
 }
 

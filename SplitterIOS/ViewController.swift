@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var delegate: SceneRouteDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupUI()
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
 
+extension ViewController {
+    func setupUI() {
+        view.backgroundColor = .systemBackground
+        navigationItem.title = "Добро пожаловать в разработку Day_Splitter"
+    }
+}

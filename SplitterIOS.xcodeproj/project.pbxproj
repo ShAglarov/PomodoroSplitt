@@ -10,13 +10,13 @@
 		4BB193AF2B94D71E0007764C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193AE2B94D71E0007764C /* AppDelegate.swift */; };
 		4BB193B12B94D71E0007764C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193B02B94D71E0007764C /* SceneDelegate.swift */; };
 		4BB193B32B94D71E0007764C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193B22B94D71E0007764C /* ViewController.swift */; };
-		4BB193B62B94D71E0007764C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB193B42B94D71E0007764C /* Main.storyboard */; };
 		4BB193B92B94D71E0007764C /* SplitterIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193B72B94D71E0007764C /* SplitterIOS.xcdatamodeld */; };
 		4BB193BB2B94D7200007764C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB193BA2B94D7200007764C /* Assets.xcassets */; };
 		4BB193BE2B94D7200007764C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB193BC2B94D7200007764C /* LaunchScreen.storyboard */; };
 		4BB193C92B94D7210007764C /* SplitterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193C82B94D7210007764C /* SplitterIOSTests.swift */; };
 		4BB193D32B94D7210007764C /* SplitterIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193D22B94D7210007764C /* SplitterIOSUITests.swift */; };
 		4BB193D52B94D7210007764C /* SplitterIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193D42B94D7210007764C /* SplitterIOSUITestsLaunchTests.swift */; };
+		4BB193E22B94D9C60007764C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193E12B94D9C60007764C /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		4BB193AE2B94D71E0007764C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB193B02B94D71E0007764C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4BB193B22B94D71E0007764C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4BB193B52B94D71E0007764C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BB193B82B94D71E0007764C /* SplitterIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SplitterIOS.xcdatamodel; sourceTree = "<group>"; };
 		4BB193BA2B94D7200007764C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BB193BD2B94D7200007764C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		4BB193CE2B94D7210007764C /* SplitterIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitterIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB193D22B94D7210007764C /* SplitterIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterIOSUITests.swift; sourceTree = "<group>"; };
 		4BB193D42B94D7210007764C /* SplitterIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4BB193E12B94D9C60007764C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 				4BB193AE2B94D71E0007764C /* AppDelegate.swift */,
 				4BB193B02B94D71E0007764C /* SceneDelegate.swift */,
 				4BB193B22B94D71E0007764C /* ViewController.swift */,
-				4BB193B42B94D71E0007764C /* Main.storyboard */,
+				4BB193E12B94D9C60007764C /* TabBarController.swift */,
 				4BB193BA2B94D7200007764C /* Assets.xcassets */,
 				4BB193BC2B94D7200007764C /* LaunchScreen.storyboard */,
 				4BB193BF2B94D7200007764C /* Info.plist */,
@@ -236,7 +236,6 @@
 			files = (
 				4BB193BE2B94D7200007764C /* LaunchScreen.storyboard in Resources */,
 				4BB193BB2B94D7200007764C /* Assets.xcassets in Resources */,
-				4BB193B62B94D71E0007764C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +263,7 @@
 				4BB193B32B94D71E0007764C /* ViewController.swift in Sources */,
 				4BB193AF2B94D71E0007764C /* AppDelegate.swift in Sources */,
 				4BB193B92B94D71E0007764C /* SplitterIOS.xcdatamodeld in Sources */,
+				4BB193E22B94D9C60007764C /* TabBarController.swift in Sources */,
 				4BB193B12B94D71E0007764C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4BB193B42B94D71E0007764C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BB193B52B94D71E0007764C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4BB193BC2B94D7200007764C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -451,7 +443,6 @@
 				INFOPLIST_FILE = SplitterIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -479,7 +470,6 @@
 				INFOPLIST_FILE = SplitterIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
