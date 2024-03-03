@@ -105,8 +105,8 @@
 				4BB193B02B94D71E0007764C /* SceneDelegate.swift */,
 				4BB193B22B94D71E0007764C /* ViewController.swift */,
 				4BB193E12B94D9C60007764C /* TabBarController.swift */,
-				4BB193BA2B94D7200007764C /* Assets.xcassets */,
 				4BB193BC2B94D7200007764C /* LaunchScreen.storyboard */,
+				4BB193BA2B94D7200007764C /* Assets.xcassets */,
 				4BB193BF2B94D7200007764C /* Info.plist */,
 				4BB193B72B94D71E0007764C /* SplitterIOS.xcdatamodeld */,
 			);
