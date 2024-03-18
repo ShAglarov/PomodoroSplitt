@@ -1,10 +1,3 @@
-//
-//  Strings+Generated.swift
-//  SplitterIOS
-//
-//  Created by Shamil Aglarov on 18.03.2024.
-//
-
 // swiftlint:disable all
 // Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
@@ -18,9 +11,9 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
   /// Localizable.strings
-  ///   FollowNature
-  ///
-  ///   Created by Andrey Pozdnyakov on 12.09.2023.
+  ///   SplitterIOS
+  /// 
+  ///   Created by Shamil Aglarov on 18.03.2024.
   internal static let home = L10n.tr("Localizable", "home", fallback: "Главная")
   /// Блокнот
   internal static let notepad = L10n.tr("Localizable", "notepad", fallback: "Блокнот")
