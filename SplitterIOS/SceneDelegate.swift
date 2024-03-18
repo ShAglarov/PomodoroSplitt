@@ -14,6 +14,8 @@ protocol SceneRouteDelegate: AnyObject {
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneRouteDelegate {
     
     var window: UIWindow?
+    private let mainCoordinator = MainTabBarCoordinator().strongRouter
+    
     lazy var isLogin: Bool = true
     
     override init(){
@@ -21,13 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneRouteDelegate {
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        guard let scene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: scene)
-        window.makeKeyAndVisible()
-        self.window = window
-        
-        setLoginStatus(isLogin: isLogin)
+        guard let windowScene = (scene as? UIWindowScene) else { fatalError("No one window scene exist") }
+        window = UIWindow(windowScene: windowScene)
+        mainCoordinator.setRoot(for: window!)
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {}
