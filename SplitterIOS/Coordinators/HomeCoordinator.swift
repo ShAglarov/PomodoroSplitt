@@ -22,8 +22,11 @@ class HomeCoordinator: NavigationCoordinator<HomeRoute> {
         switch route {
             
         case .home:
-            viewController.view.backgroundColor = .white
-            return .push(buildHomeScreen())
+            viewController.view.backgroundColor = .systemBackground
+            var homeVC = buildHomeScreen()
+            homeVC.navigationItem.title = "Welcome"
+            homeVC.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+            return .push(homeVC)
         }
     }
     

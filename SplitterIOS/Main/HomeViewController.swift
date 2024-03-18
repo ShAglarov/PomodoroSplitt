@@ -30,7 +30,6 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol {
 
 extension HomeViewController {
     func setupUI() {
-        view.backgroundColor = .systemBackground
-        navigationItem.title = "Welcome App"
+        
     }
 }
