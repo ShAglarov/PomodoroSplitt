@@ -8,12 +8,14 @@
 import UIKit
 
 protocol SceneRouteDelegate: AnyObject {
-    func setLoginStatus(isLogin: Bool)
+//    func setLoginStatus(isLogin: Bool)
 }
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneRouteDelegate {
     
     var window: UIWindow?
+    private let mainCoordinator = MainTabBarCoordinator().strongRouter
+    
     lazy var isLogin: Bool = true
     
     override init(){
@@ -21,13 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneRouteDelegate {
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        guard let scene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: scene)
-        window.makeKeyAndVisible()
-        self.window = window
-        
-        setLoginStatus(isLogin: isLogin)
+        guard let windowScene = (scene as? UIWindowScene) else { fatalError("No one window scene exist") }
+        window = UIWindow(windowScene: windowScene)
+        mainCoordinator.setRoot(for: window!)
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {}
@@ -44,20 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneRouteDelegate {
     
     //Функция устанвливает рут контроллер у приложения
     private func startRootController(viewController: UIViewController){
-        self.window?.rootViewController = UINavigationController(rootViewController:
-                                                                    viewController)
-    }
-    
-    //Делегат роутинга, вызывать при авторизации и разлогина
-    func setLoginStatus(isLogin: Bool) {
-        if isLogin {
-            let startController = TabBarController()
-            startRootController(viewController: startController)
-        } else {
-            let startController = ViewController()
-            startController.delegate = self
-            startRootController(viewController: startController)
-        }
+        self.window?.rootViewController = UINavigationController(rootViewController: viewController)
     }
 }
 
