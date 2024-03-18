@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4BB193AF2B94D71E0007764C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193AE2B94D71E0007764C /* AppDelegate.swift */; };
 		4BB193B12B94D71E0007764C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193B02B94D71E0007764C /* SceneDelegate.swift */; };
-		4BB193B32B94D71E0007764C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193B22B94D71E0007764C /* ViewController.swift */; };
 		4BB193B92B94D71E0007764C /* SplitterIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BB193B72B94D71E0007764C /* SplitterIOS.xcdatamodeld */; };
 		4BB193BB2B94D7200007764C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB193BA2B94D7200007764C /* Assets.xcassets */; };
 		4BB193BE2B94D7200007764C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB193BC2B94D7200007764C /* LaunchScreen.storyboard */; };
@@ -30,6 +29,8 @@
 		4BC900A82BA883A00087D290 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC900A72BA883A00087D290 /* Strings+Generated.swift */; };
 		4BC900AA2BA883B90087D290 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC900A92BA883B90087D290 /* XCAssets+Generated.swift */; };
 		4BC900AE2BA8AE760087D290 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BC900AD2BA8AE760087D290 /* Localizable.strings */; };
+		4BC900B42BA8C1470087D290 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC900B02BA8C1470087D290 /* HomePresenter.swift */; };
+		4BC900B62BA8C1470087D290 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC900B22BA8C1470087D290 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +54,6 @@
 		4BB193AB2B94D71E0007764C /* SplitterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB193AE2B94D71E0007764C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB193B02B94D71E0007764C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BB193B22B94D71E0007764C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BB193B82B94D71E0007764C /* SplitterIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SplitterIOS.xcdatamodel; sourceTree = "<group>"; };
 		4BB193BA2B94D7200007764C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BB193BD2B94D7200007764C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +72,8 @@
 		4BC900A72BA883A00087D290 /* Strings+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		4BC900A92BA883B90087D290 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		4BC900AD2BA8AE760087D290 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		4BC900B02BA8C1470087D290 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		4BC900B22BA8C1470087D290 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +132,7 @@
 			children = (
 				4BB193AE2B94D71E0007764C /* AppDelegate.swift */,
 				4BB193B02B94D71E0007764C /* SceneDelegate.swift */,
-				4BB193B22B94D71E0007764C /* ViewController.swift */,
+				4BC900B82BA8C1810087D290 /* Main */,
 				4BC900982BA881C50087D290 /* Coordinators */,
 				4BB193BC2B94D7200007764C /* LaunchScreen.storyboard */,
 				4BC900A62BA883880087D290 /* Generated */,
@@ -202,6 +204,23 @@
 				4BC900AD2BA8AE760087D290 /* Localizable.strings */,
 			);
 			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		4BC900B82BA8C1810087D290 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4BC900B92BA8C3AA0087D290 /* Home */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4BC900B92BA8C3AA0087D290 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4BC900B22BA8C1470087D290 /* HomeViewController.swift */,
+				4BC900B02BA8C1470087D290 /* HomePresenter.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,16 +368,17 @@
 			files = (
 				4BC900AA2BA883B90087D290 /* XCAssets+Generated.swift in Sources */,
 				4BC900A52BA882D70087D290 /* ProfileCoordinator.swift in Sources */,
+				4BC900B62BA8C1470087D290 /* HomeViewController.swift in Sources */,
 				4BC9009E2BA882910087D290 /* PreviewMock.swift in Sources */,
 				4BC900A82BA883A00087D290 /* Strings+Generated.swift in Sources */,
 				4BC900A02BA882A00087D290 /* EmptyRouter.swift in Sources */,
 				4BC900A32BA882CE0087D290 /* NotepadCoordinator.swift in Sources */,
-				4BB193B32B94D71E0007764C /* ViewController.swift in Sources */,
 				4BB193AF2B94D71E0007764C /* AppDelegate.swift in Sources */,
 				4BC9009C2BA8826F0087D290 /* MainTabBarCoordinator.swift in Sources */,
 				4BB193B92B94D71E0007764C /* SplitterIOS.xcdatamodeld in Sources */,
 				4BB193B12B94D71E0007764C /* SceneDelegate.swift in Sources */,
 				4BC9009A2BA8822D0087D290 /* HomeCoordinator.swift in Sources */,
+				4BC900B42BA8C1470087D290 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
