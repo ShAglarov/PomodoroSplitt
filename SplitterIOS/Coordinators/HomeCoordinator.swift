@@ -8,8 +8,14 @@
 import XCoordinator
 import UIKit
 
+struct News {
+    let id: String
+    let title: String
+}
+
 enum HomeRoute: Route {
     case home
+    case news([News])
 }
 
 class HomeCoordinator: NavigationCoordinator<HomeRoute> {
@@ -23,10 +29,14 @@ class HomeCoordinator: NavigationCoordinator<HomeRoute> {
             
         case .home:
             viewController.view.backgroundColor = .systemBackground
-            var homeVC = buildHomeScreen()
+            let homeVC = buildHomeScreen()
             homeVC.navigationItem.title = "Welcome"
-            homeVC.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
             return .push(homeVC)
+        case .news(let news):
+            viewController.view.backgroundColor = .systemBackground
+            let newsVC = buildHomeScreen()
+            newsVC.navigationItem.title = news[Int.random(in: 0..<2)].title
+            return .push(newsVC)
         }
     }
     
@@ -34,6 +44,13 @@ class HomeCoordinator: NavigationCoordinator<HomeRoute> {
     private func buildHomeScreen() -> UIViewController {
         let view = HomeViewController()
         let presenter = HomePresenter(view: view, router: unownedRouter)
+        view.presenter = presenter
+        return view
+    }
+    
+    private func buildNewsScreen() -> UIViewController {
+        let view = NewsViewController()
+        let presenter = NewsPresenter(view: view, router: unownedRouter)
         view.presenter = presenter
         return view
     }
